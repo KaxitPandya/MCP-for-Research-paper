@@ -1,0 +1,27 @@
+# Cached API responses
+.cache/
+
+# Downloaded papers
+papers/
+
+# Environment config
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
