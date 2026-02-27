@@ -827,22 +827,6 @@ def main():
             st.session_state.chat_history.append({"type": "assistant", "content": response})
             st.rerun()
 
-    # === SIDEBAR ===========================================================
-    with st.sidebar:
-        st.header("Saved Topics")
-        topics = list_saved_topics()
-        if topics:
-            for t in topics:
-                papers = load_papers(t)
-                st.markdown(f"**{t.replace('_', ' ').title()}** ({len(papers)} papers)")
-        else:
-            st.info("No topics yet.")
-
-        st.markdown("---")
-        st.markdown("**arXiv MCP Research Assistant**")
-        st.markdown("Built with Streamlit + FastMCP")
-        st.caption(f"v2.0 | {datetime.now().strftime('%Y-%m-%d')}")
-
 
 if __name__ == "__main__":
     main()
